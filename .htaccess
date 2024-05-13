@@ -1,0 +1,12 @@
+# Enable GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript application/javascript
+</IfModule>
+
+# Redirect requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php [L,QSA]
+
+# Set directory index
+DirectoryIndex index.php index.html
