@@ -16,7 +16,7 @@ switch (TestProject\REQUESTED_PATH) {
 		break;
 
 	case '/page3':
-		$title = 'Page 2';
+		$title = 'Page 3';
 		break;
 
 	default:
