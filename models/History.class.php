@@ -28,8 +28,6 @@ class History
 
 	public function __construct()
 	{
-		// unset($_SESSION['history']);
-
 		$this->firstPage = $_SESSION['history']['firstPage'] ?? NULL;
 		$this->currentPage = $_SESSION['history']['currentPage'] ?? NULL;
 		$this->lastPage = $_SESSION['history']['lastPage'] ?? NULL;
@@ -40,13 +38,6 @@ class History
 			$_SESSION['history'] = [];
 			$this->updateSessionAll();
 		}
-	}
-
-	public function __destruct()
-	{
-		// echo '<pre>';
-		// var_dump($_SESSION['history']);
-		// echo '</pre>';
 	}
 
 	/******************************************************************
@@ -151,9 +142,6 @@ class History
 	 ******************************************************************/
 	public function back()
 	{
-		// var_dump($this->currentPage->prev);
-		// exit();
-
 		if ($this->currentPage && $this->currentPage->prev) {
 			$this->currentPage = $this->currentPage->prev;
 			$this->action = 'back';
