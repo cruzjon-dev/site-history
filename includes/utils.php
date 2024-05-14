@@ -22,3 +22,6 @@ switch (TestProject\REQUESTED_PATH) {
 }
 
 $Page = new \TestProject\Page($title, '');
+
+// Track history
+$History = new \TestProject\History();
