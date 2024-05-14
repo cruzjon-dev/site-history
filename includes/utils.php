@@ -1,8 +1,5 @@
 <?php
 
-// Models
-require_once('models/Page.class.php');
-
 // Test Data
 define('TestProject\REQUESTED_PATH', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
